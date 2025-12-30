@@ -1,0 +1,40 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "apiPrefix": "/api",
+    "apiVersion": "v1"
+  },
+  "database": {
+    "uri": "mongodb://localhost:27017/healthcare_assistant",
+    "options": {
+      "useNewUrlParser": true,
+      "useUnifiedTopology": true,
+      "maxPoolSize": 10,
+      "serverSelectionTimeoutMS": 5000,
+      "socketTimeoutMS": 45000
+    }
+  },
+  "security": {
+    "jwtExpire": "7d",
+    "bcryptRounds": 10,
+    "rateLimitWindowMs": 900000,
+    "rateLimitMaxRequests": 100
+  },
+  "hipaa": {
+    "enableAuditLogging": true,
+    "dataEncryption": true,
+    "retentionDays": 2555
+  },
+  "performance": {
+    "cacheDuration": 300,
+    "responseTimeThreshold": 3000
+  },
+  "validation": {
+    "diagnosticConfidenceMin": 0,
+    "diagnosticConfidenceMax": 100,
+    "validationScoreMin": 0,
+    "validationScoreMax": 100
+  }
+}
+

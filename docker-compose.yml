@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: cursorminds-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: healthcare_assistant
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./docker/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - cursorminds-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/healthcare_assistant --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Healthcare Assistant Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cursorminds-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - MONGODB_URI=mongodb://mongodb:27017/healthcare_assistant
+      - JWT_SECRET=${JWT_SECRET:-default-secret-change-me}
+      - ENABLE_AUDIT_LOGGING=true
+      - DATA_ENCRYPTION=true
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - cursorminds-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/v1/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  cursorminds-network:
+    driver: bridge
+
