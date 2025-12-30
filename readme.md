@@ -195,6 +195,31 @@ docker-compose up -d --build
 
 ---
 
+### Snapshots
+#### Dashboard 
+<img width="1919" height="916" alt="Screenshot (2038)" src="https://github.com/user-attachments/assets/90284a89-475f-4820-bf9d-cd921e621c32" />
+
+#### Patients Page
+<img width="1907" height="909" alt="Screenshot (2048)" src="https://github.com/user-attachments/assets/7e57d01e-754c-4131-922b-31395f2fd9f5" />
+
+#### Diagnosis Page
+<img width="1902" height="901" alt="Screenshot (2040)" src="https://github.com/user-attachments/assets/cc10a132-ae2b-4bab-8101-2229f874ec95" />
+<img width="1905" height="910" alt="Screenshot (2041)" src="https://github.com/user-attachments/assets/7cc86b8b-35cb-4496-8689-10d40c7345c7" />
+<img width="1894" height="811" alt="Screenshot (2042)" src="https://github.com/user-attachments/assets/f052c091-d097-4eeb-8dc8-f7fd06a92d9f" />
+<img width="1891" height="418" alt="Screenshot (2043)" src="https://github.com/user-attachments/assets/19e260a2-d235-4966-bebf-8b62e5b83596" />
+
+#### Imaging Page
+
+<img width="1901" height="911" alt="Screenshot (2044)" src="https://github.com/user-attachments/assets/d89dbe0d-0f96-4758-98d2-b2f1405a6796" />
+<img width="1900" height="906" alt="Screenshot (2045)" src="https://github.com/user-attachments/assets/423d56ae-7710-4bab-aa0f-295bab91e1a4" />
+
+#### Reports Page
+<img width="1905" height="906" alt="Screenshot (2046)" src="https://github.com/user-attachments/assets/bb5a441f-14ba-4cb5-977c-ead044f134d7" />
+<img width="1899" height="898" alt="Screenshot (2047)" src="https://github.com/user-attachments/assets/4c18d9fe-f62c-4545-b2a2-32dce0c32dce" />
+
+
+---
+
 ## 📚 API Documentation
 
 Complete documentation is available in the `docs/` folder:
