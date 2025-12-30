@@ -18,7 +18,6 @@
 - [Running the Application](#running-the-application)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
-- [Team](#team)
 
 ---
 
@@ -382,22 +381,7 @@ Install from: https://nodejs.org/ (version 18 or higher)
 - Try: `docker system prune -a` (removes all containers and images)
 - Rebuild: `docker-compose up --build`
 
----
 
-## 👥 Team
-
-**Team CursorMinds**
-
-- Healthcare diagnostic assistant developed for Technothon 2025
-- Focused on improving healthcare accessibility through intelligent clinical decision support
-
----
-
-## 📝 License
-
-This project is developed for Technothon 2025 submission.
-
----
 
 ## 📞 Support
 
@@ -415,11 +399,6 @@ For technical issues or questions:
 - Built with Cursor AI assistance
 - Medical knowledge bases and clinical guidelines
 - Open-source community for amazing tools
-
----
-
-**Team CursorMinds © 2025**
-**Technothon 2025 - Smart Healthcare Diagnostic Assistant**
 
 
 
